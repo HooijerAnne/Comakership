@@ -1,0 +1,136 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - h4
+                - h5
+                - h6
+                - underline
+                - small
+                - codeblock
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: true
+              link_noreferrer: true
+              target_blank: true
+              sets:
+                code_example:
+                  display: 'Code example'
+                  instructions: null
+                  icon: null
+                  sets:
+                    code_example:
+                      display: 'code example'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: code
+                          field:
+                            theme: material
+                            mode: php
+                            mode_selectable: true
+                            indent_type: spaces
+                            indent_size: 4
+                            key_map: default
+                            line_numbers: true
+                            line_wrapping: true
+                            antlers: false
+                            type: code
+                            display: Code
+                            icon: code
+                            instructions: 'Write something useful here'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                    giph:
+                      display: Giph
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: giphy
+                          field:
+                            input_type: url
+                            placeholder: 'Place something from the internet to see some magic'
+                            antlers: false
+                            type: text
+                            display: Giphy
+                            icon: text
+                            instructions: 'Paste an awesome giph in here, or else'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: Content
+              icon: bard
+              instructions: 'write cool stuff here'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+title: Post
